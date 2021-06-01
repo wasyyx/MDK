@@ -7,5 +7,4 @@ public class ObsidianIngot extends Item {
     public ObsidianIngot() {
         super(new Properties().group(ItemGroup.MATERIALS));
     }
-
 }

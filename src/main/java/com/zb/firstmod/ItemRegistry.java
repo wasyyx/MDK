@@ -8,8 +8,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ForgeRegistry;
 
 public class ItemRegistry {
-    private static final DeferredRegister<Item> ITEMS=new DeferredRegister(ForgeRegistries.ITEMS,"firstmod");
-    RegistryObject<Item> obsidianIngot= ITEMS.register(
-           "obsidian_Ingot",()->{return new ObsidianIngot();}
-    );
+    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, "firstmod");
+    public static RegistryObject<Item> obsidianIngot = ITEMS.register("obsidian_ingot", () -> {
+        return new ObsidianIngot();
+    });
 }
