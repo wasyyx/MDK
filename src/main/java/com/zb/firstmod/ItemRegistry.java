@@ -1,5 +1,7 @@
 package com.zb.firstmod;
 
+import com.zb.firstmod.food.ObsidianApple;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
@@ -11,5 +13,8 @@ public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, "firstmod");
     public static RegistryObject<Item> obsidianIngot = ITEMS.register("obsidian_ingot", () -> {
         return new ObsidianIngot();
+    });
+    public  static RegistryObject<Item> obsidianApple=ITEMS.register("obsidian_apple",
+            ()->{return new ObsidianApple();
     });
 }
