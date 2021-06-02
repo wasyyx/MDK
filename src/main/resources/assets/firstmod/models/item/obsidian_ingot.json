@@ -1,0 +1,6 @@
+{
+  "parent": "item/generate",
+  "textures": {
+    "layer0": "firstmod:item/obsidian_ingot"
+  }
+}
