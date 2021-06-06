@@ -1,9 +1,6 @@
 package com.zb.firstmod;
 
-import com.zb.firstmod.block.ObsidianBlock;
-import com.zb.firstmod.block.ObsidianFrame;
-import com.zb.firstmod.block.ObsidianRubikCube;
-import com.zb.firstmod.block.RandomBlock;
+import com.zb.firstmod.block.*;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,5 +21,10 @@ public class BlockRegistry {
     public static RegistryObject<Block> randomBlock=BLOCKS.register("random_block",  ()->{
         return new RandomBlock();
     });
-
+    public static RegistryObject<Block> glassJar=BLOCKS.register("glass_jar",  ()->{
+        return new GlassJar();
+    });
+    public static RegistryObject<Block> obsidianOBJ=BLOCKS.register("obsidian_obj",  ()->{
+        return new ObsidianOBJ();
+    });
 }

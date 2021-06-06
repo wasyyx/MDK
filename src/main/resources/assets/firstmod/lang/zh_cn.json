@@ -4,5 +4,9 @@
   "item.firstmod.obsidian_apple": "黑曜石苹果",
   "item.firstmod.obsidian_sword": "黑曜石剑",
   "block.firstmod.obsidian_block": "黑曜石方块",
-  "block.firstmod.obsidian_rubik_cube": "黑曜石魔方"
+  "block.firstmod.obsidian_rubik_cube": "黑曜石魔方",
+  "block.firstmod.random_block": "幸运方块",
+  "block.firstmod.obsidian_frame": "黑曜石框架",
+  "block.firstmod.glass_jar": "玻璃罐",
+  "block.firstmod.obsidian_obj": "黑曜石obj模型"
 }

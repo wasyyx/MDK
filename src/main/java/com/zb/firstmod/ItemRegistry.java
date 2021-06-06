@@ -33,7 +33,13 @@ public class ItemRegistry {
     public  static RegistryObject<BlockItem> obsidianFrame=ITEMS.register("obsidian_frame",
             ()->{return new BlockItem(BlockRegistry.obsidianFrame.get(),new Item.Properties().group(ModGroup.obsidianGroup));
             });
-    public  static RegistryObject<BlockItem> randmoBlock=ITEMS.register("random_block",
+    public  static RegistryObject<BlockItem> randomBlock=ITEMS.register("random_block",
             ()->{return new BlockItem(BlockRegistry.randomBlock.get(),new Item.Properties().group(ModGroup.obsidianGroup));
+            });
+    public  static RegistryObject<BlockItem> glassJar=ITEMS.register("glass_jar",
+            ()->{return new BlockItem(BlockRegistry.glassJar.get(),new Item.Properties().group(ModGroup.obsidianGroup));
+            });
+    public  static RegistryObject<BlockItem> obsidianOBJ=ITEMS.register("obsidian_obj",
+            ()->{return new BlockItem(BlockRegistry.obsidianOBJ.get(),new Item.Properties().group(ModGroup.obsidianGroup));
             });
 }
