@@ -42,4 +42,10 @@ public class ItemRegistry {
     public  static RegistryObject<BlockItem> obsidianOBJ=ITEMS.register("obsidian_obj",
             ()->{return new BlockItem(BlockRegistry.obsidianOBJ.get(),new Item.Properties().group(ModGroup.obsidianGroup));
             });
+    public  static RegistryObject<BlockItem> obsidianCounter=ITEMS.register("obsidian_counter",
+            ()->{return new BlockItem(BlockRegistry.obsidianCounter.get(),new Item.Properties().group(ModGroup.obsidianGroup));
+            });
+    public  static RegistryObject<BlockItem> obsidianHelloBlock=ITEMS.register("obsidian_hello_block",
+            ()->{return new BlockItem(BlockRegistry.obsidianHelloBlock.get(),new Item.Properties().group(ModGroup.obsidianGroup));
+            });
 }

@@ -8,5 +8,7 @@
   "block.firstmod.random_block": "幸运方块",
   "block.firstmod.obsidian_frame": "黑曜石框架",
   "block.firstmod.glass_jar": "玻璃罐",
-  "block.firstmod.obsidian_obj": "黑曜石obj模型"
+  "block.firstmod.obsidian_obj": "黑曜石obj模型",
+  "block.firstmod.obsidian_counter": "黑曜石计数器",
+  "message.firstmod.counter": "计数: %d"
 }

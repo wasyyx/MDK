@@ -10,5 +10,6 @@ public class FirstMod {
     public FirstMod() {
         ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        TileEntityTypeRegistry.TILE_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
