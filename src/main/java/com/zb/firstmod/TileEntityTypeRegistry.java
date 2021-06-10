@@ -19,4 +19,10 @@ public class TileEntityTypeRegistry {
             return new ObsidianCounterTileEntity();
         }, BlockRegistry.obsidianCounter.get()).build(null);
     });
+    public static RegistryObject<TileEntityType<ObsidianCounterTileEntity>> obsidianHelloBlockTileEntity =
+            TILE_ENTITY_TYPE_DEFERRED_REGISTER.register("obsidian_hello_block_tileentity", () -> {
+                return TileEntityType.Builder.create(()->{
+                    return new ObsidianCounterTileEntity();
+                }, BlockRegistry.obsidianHelloBlock.get()).build(null);
+            });
 }

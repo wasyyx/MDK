@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "firstmod:block/obsidian_hello_block_texture"
+  }
+}
