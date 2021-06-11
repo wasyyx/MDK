@@ -48,4 +48,7 @@ public class ItemRegistry {
     public  static RegistryObject<BlockItem> obsidianHelloBlock=ITEMS.register("obsidian_hello_block",
             ()->{return new BlockItem(BlockRegistry.obsidianHelloBlock.get(),new Item.Properties().group(ModGroup.obsidianGroup));
             });
+    public  static RegistryObject<BlockItem> obsidianZombieBlock=ITEMS.register("obsidian_zombie_block",
+            ()->{return new BlockItem(BlockRegistry.obsidianZombieBlock.get(),new Item.Properties().group(ModGroup.obsidianGroup));
+            });
 }

@@ -15,6 +15,7 @@ public class ObsidianHelloBlockTileEntity extends TileEntity implements ITickabl
 
     @Override
     public void tick() {
+        //判断是否再服务端调用,任何涉及到数据处理的逻辑都应该在服务端执行
         if(!world.isRemote){
             if(timer==MAX_TIME){
                 //获取这个方块位置周围10格的玩家实体

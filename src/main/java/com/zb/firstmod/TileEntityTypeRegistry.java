@@ -1,6 +1,7 @@
 package com.zb.firstmod;
 
 import com.zb.firstmod.tileEntity.ObsidianCounterTileEntity;
+import com.zb.firstmod.tileEntity.ObsidianZombieBlockTileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,5 +25,11 @@ public class TileEntityTypeRegistry {
                 return TileEntityType.Builder.create(()->{
                     return new ObsidianCounterTileEntity();
                 }, BlockRegistry.obsidianHelloBlock.get()).build(null);
+            });
+    public static RegistryObject<TileEntityType<ObsidianZombieBlockTileEntity>> obsidianZombieBlockTileEntity =
+            TILE_ENTITY_TYPE_DEFERRED_REGISTER.register("obsidian_zombie_block_tileentity", () -> {
+                return TileEntityType.Builder.create(()->{
+                    return new ObsidianZombieBlockTileEntity();
+                }, BlockRegistry.obsidianZombieBlock.get()).build(null);
             });
 }

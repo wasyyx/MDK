@@ -14,6 +14,7 @@ public class ObsidianCounterTileEntity extends TileEntity {
 
     public int increase(){
         counter++;
+        //标记数据被修改，让游戏知道关闭时调用保存方法
         markDirty();
         return counter;
     }
