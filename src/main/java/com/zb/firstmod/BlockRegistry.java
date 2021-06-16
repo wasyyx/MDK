@@ -36,4 +36,7 @@ public class BlockRegistry {
     public static RegistryObject<Block> obsidianZombieBlock=BLOCKS.register("obsidian_zombie_block",  ()->{
         return new ObsidianZombieBlock();
     });
+    public static RegistryObject<Block> obsidianHiddenBlock=BLOCKS.register("obsidian_hidden_block",  ()->{
+        return new ObsidianHiddenBlock();
+    });
 }

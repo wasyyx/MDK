@@ -11,5 +11,7 @@
   "block.firstmod.obsidian_obj": "黑曜石obj模型",
   "block.firstmod.obsidian_counter": "黑曜石计数器",
   "message.firstmod.counter": "计数: %d",
-  "block.firstmod.obsidian_hello_block": "黑曜石欢迎方块"
+  "block.firstmod.obsidian_hello_block": "黑曜石欢迎方块",
+  "block.firstmod.obsidian_zombie_block": "黑曜石僵尸吼声方块",
+  "block.firstmod.obsidian_hidden_block": "黑曜石隐藏方块"
 }

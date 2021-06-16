@@ -1,7 +1,13 @@
 package com.zb.firstmod.backed_model;
 
 import com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
+import com.zb.firstmod.BlockRegistry;
+import com.zb.firstmod.ItemRegistry;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BlockModelRenderer;
+import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ItemOverrideList;
@@ -20,14 +26,25 @@ import java.util.Random;
 
 public class ObsidianHiddenBlockModel implements IBakedModel {
     IBakedModel defaultModel;
+    //相当于是一个键
     public static ModelProperty<BlockState> COPIED_BLOCK=new ModelProperty<>();
-    public ObsidianHiddenBlockModel() {
+    public ObsidianHiddenBlockModel(IBakedModel existingModel) {
+        defaultModel = existingModel;
     }
 
     @Nonnull
     @Override
     public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, @Nonnull Random rand, @Nonnull IModelData extraData) {
-        return null;
+        IBakedModel renderModel=defaultModel;
+        if(extraData.hasProperty(COPIED_BLOCK)){
+           BlockState copiedBlock = extraData.getData(COPIED_BLOCK);
+           if(copiedBlock!=null){
+               Minecraft mc=Minecraft.getInstance();
+               BlockRendererDispatcher blockRendererDispatcher=mc.getBlockRendererDispatcher();
+               renderModel=blockRendererDispatcher.getModelForState(copiedBlock);
+           }
+        }
+        return renderModel.getQuads(state,side,rand,extraData);
     }
 
     @Override
@@ -37,11 +54,16 @@ public class ObsidianHiddenBlockModel implements IBakedModel {
 
     @Nonnull
     @Override
+    //返回值传入getQuads中的extraData参数
     public IModelData getModelData(@Nonnull ILightReader world, @Nonnull BlockPos pos, @Nonnull BlockState state, @Nonnull IModelData tileData) {
         BlockState downBlockState=world.getBlockState(pos.down());
         ModelDataMap modelDataMap=new ModelDataMap.Builder().withInitial(COPIED_BLOCK,null).build();
-        //////
-        return null;
+        //下方为空气或隐藏方块则隐藏
+        if(downBlockState.getBlock()== Blocks.AIR || downBlockState.getBlock()== BlockRegistry.obsidianHiddenBlock.get()){
+            return modelDataMap;
+        }
+        modelDataMap.setData(COPIED_BLOCK,downBlockState);
+        return modelDataMap;
     }
 
     @Override
