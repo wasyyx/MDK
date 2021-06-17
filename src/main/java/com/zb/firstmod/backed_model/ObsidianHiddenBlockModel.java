@@ -1,12 +1,9 @@
 package com.zb.firstmod.backed_model;
 
-import com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 import com.zb.firstmod.BlockRegistry;
-import com.zb.firstmod.ItemRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockModelRenderer;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;

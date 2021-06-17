@@ -26,7 +26,7 @@ public class ObsidianZombieBlockTileEntity extends TileEntity implements ITickab
     public void tick() {
         //客户端放僵尸声音,播放声音也可以在服务端执行
         if(world.isRemote && flag){
-            PlayerEntity player=world.getClosestPlayer(pos.getX(),pos.getX(),pos.getZ(),10,false);
+            PlayerEntity player=world.getClosestPlayer(pos.getX(),pos.getY(),pos.getZ(),10,false);
             world.playSound(player,pos, SoundEvents.ENTITY_ZOMBIE_AMBIENT, SoundCategory.AMBIENT,1.0f,1.0f);
             flag=false;
         }
